@@ -78,4 +78,6 @@ theme: literature
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  type: git
+  repository: git@github.com:chunhuili/chunhuili.github.io.git
+  branch: master
