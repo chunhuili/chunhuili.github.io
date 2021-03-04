@@ -4,21 +4,21 @@
   <meta charset="utf-8">
   
   
-  <title>CSS-布局方案1 | 小白</title>
+  <title>CSS-布局方案1 | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="问题：将某个元素在容器中水平居中思路一：绝对定位方案 2、常规操作：margin 置为负值 这条路的前提是，div 盒子的宽高提前已知   2、深入理解元素的流体特性：神奇的 margin: auto 当我们想要水平居中某个元素，可设置margin: 0 auto; auto 在任何情况下，只会取下面两种值中的一个 1、父元素剩余空间的宽度 2、0   当元素的布局方式为 static&#x2F;relat">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS-布局方案1">
 <meta property="og:url" content="http://example.com/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/index.html">
-<meta property="og:site_name" content="小白">
+<meta property="og:site_name" content="学习笔记">
 <meta property="og:description" content="问题：将某个元素在容器中水平居中思路一：绝对定位方案 2、常规操作：margin 置为负值 这条路的前提是，div 盒子的宽高提前已知   2、深入理解元素的流体特性：神奇的 margin: auto 当我们想要水平居中某个元素，可设置margin: 0 auto; auto 在任何情况下，只会取下面两种值中的一个 1、父元素剩余空间的宽度 2、0   当元素的布局方式为 static&#x2F;relat">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-04T06:34:07.000Z">
-<meta property="article:modified_time" content="2021-03-04T08:32:48.504Z">
+<meta property="article:modified_time" content="2021-03-04T08:34:16.342Z">
 <meta property="article:author" content="木紫">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="小白" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="学习笔记" type="application/atom+xml">
   
   
     <link rel="shortcut icon" href="/favicon.png">
@@ -46,7 +46,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">小白</a>
+        <a href="/" id="logo">学习笔记</a>
       </h1>
       
         <h2 id="subtitle-wrap">
@@ -123,12 +123,16 @@
 </li>
 <li>3、动画属性 <ul>
 <li>在宽高不定的情况下，我们一般是使用 transform 这个属性来达到目的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#center &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50%;</span><br><span class="line">  top: 50%;</span><br><span class="line">  transform: translate(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>注意：position 布局下，我们还可以借助 CSS 的 calc() 函数来完成同样的调整<h4 id="思路二：Flex-布局"><a href="#思路二：Flex-布局" class="headerlink" title="思路二：Flex 布局"></a>思路二：Flex 布局</h4><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">FLex布局详讲</a></li>
+<li>注意：position 布局下，我们还可以借助 CSS 的 calc() 函数来完成同样的调整</li>
 </ul>
 </li>
-<li>首先对父元素进行Flex布局，然后指定父元素中子元素的排列方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="思路三：table-布局"><a href="#思路三：table-布局" class="headerlink" title="思路三：table 布局"></a>思路三：table 布局</h4></li>
 </ul>
+<h4 id="思路二：Flex-布局"><a href="#思路二：Flex-布局" class="headerlink" title="思路二：Flex 布局"></a>思路二：Flex 布局</h4><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">FLex布局详讲</a></p>
+<ul>
+<li>首先对父元素进行Flex布局，然后指定父元素中子元素的排列方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="思路三：table-布局"><a href="#思路三：table-布局" class="headerlink" title="思路三：table 布局"></a>思路三：table 布局</h4><pre><code>* 待续
+</code></pre>
 <h3 id="移动端疑难杂症：1px-问题如何解决？"><a href="#移动端疑难杂症：1px-问题如何解决？" class="headerlink" title="移动端疑难杂症：1px 问题如何解决？"></a>移动端疑难杂症：1px 问题如何解决？</h3><h4 id="思路一：直接写-0-5px"><a href="#思路一：直接写-0-5px" class="headerlink" title="思路一：直接写 0.5px"></a>思路一：直接写 0.5px</h4><ul>
 <li>这种方法的缺陷在于兼容性不行，IOS 系统需要8及以上的版本，安卓系统则直接不兼容。</li>
 </ul>
@@ -136,8 +140,7 @@
 <li>先放大、后缩小：在目标元素的后面追加一个 ::after 伪元素，让这个元素布局为 absolute 之后、整个伸展开铺在目标元素上，<br>然后把它的宽和高都设置为目标元素的两倍，border值设为 1px。接着借助 CSS 动画特效中的放缩能力，把整个伪元素缩小为原来的 50%。<br>此时，伪元素的宽高刚好可以和原有的目标元素对齐，而 border 也缩小为了 1px 的二分之一，间接地实现了 0.5px 的效果。</li>
 <li>伪代码如下 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#container[data-device&#x3D;&quot;2&quot;] &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#container[data-device&#x3D;&quot;2&quot;]::after&#123;</span><br><span class="line">      position:absolute;</span><br><span class="line">      top: 0;</span><br><span class="line">      left: 0;</span><br><span class="line">      width: 200%;</span><br><span class="line">      height: 200%;</span><br><span class="line">      content:&quot;&quot;;</span><br><span class="line">      transform: scale(0.5);</span><br><span class="line">      transform-origin: left top;</span><br><span class="line">      box-sizing: border-box;</span><br><span class="line">      border: 1px solid #333;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
-<p>思路三：viewport缩放来解决</p>
-<ul>
+<h4 id="思路三：viewport缩放来解决"><a href="#思路三：viewport缩放来解决" class="headerlink" title="思路三：viewport缩放来解决"></a>思路三：viewport缩放来解决</h4><ul>
 <li>viewport 中的 meta 标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;initial-scale&#x3D;0.5, maximum-scale&#x3D;0.5, minimum-scale&#x3D;0.5, user-scalable&#x3D;no&quot;&gt;</span><br></pre></td></tr></table></figure></li>
 <li>这里针对像素比为2的页面，把整个页面缩放为了原来的1/2大小。如此一来，本来占用2个物理像素的 1px 样式，现在占用的就是标准的一个物理像素。<br>根据像素比的不同，这个缩放比例可以被计算为不同的值，我们用 js 代码实现如下：**/<br>const scale = 1 / window.devicePixelRatio;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 这里 metaEl 指的是 meta 标签对应的 Dom</span><br><span class="line">metaEl.setAttribute(&#39;content&#39;, &#96;width&#x3D;device-width,user-scalable&#x3D;no,initial-scale&#x3D;$&#123;scale&#125;,maximum-scale&#x3D;$&#123;scale&#125;,minimum-scale&#x3D;$&#123;scale&#125;&#96;);</span><br></pre></td></tr></table></figure></li>
 <li>这样做的副作用也很大，整个页面被缩放了。这时候我们的 1px 已经被处理成物理像素大小了，这样的大小在手机上显示边框很合适。<br>但仔细想想，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。该如何解决呢</li>
