@@ -77,6 +77,113 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-CSS-布局方案2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/03/05/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%882/" class="article-date">
+  <time class="dt-published" datetime="2021-03-05T03:02:51.000Z" itemprop="datePublished">2021-03-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/03/05/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%882/">CSS-布局方案2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="问题：BFC是什么？如何创造一个-BFC？"><a href="#问题：BFC是什么？如何创造一个-BFC？" class="headerlink" title="问题：BFC是什么？如何创造一个 BFC？"></a>问题：BFC是什么？如何创造一个 BFC？</h3><ul>
+<li>BFC 就是一个作用范围。可以把它理解成是一个独立的容器。注意这个“独立”，它意味着这个作用范围和外界是毫不相关的</li>
+</ul>
+<p><strong>BFC常用来解决的问题</strong></p>
+<ul>
+<li>清除浮动；</li>
+<li> 阻止 margin 发生重叠；</li>
+<li>阻止元素被浮动的元素覆盖。</li>
+<li><em>常见的创建 BFC 的方法</em>*</li>
+<li>float 的值不是 none；</li>
+<li>position 的值不是 static 或者 relative；</li>
+<li>display 的值是 inline-block、table-cell、flex、table-caption 或者 inline-flex；</li>
+<li>overflow 的值不是 visible。</li>
+</ul>
+<p><strong>BFC清除浮动</strong></p>
+<p><strong>BFC 解决重叠边距问题</strong></p>
+<p><strong>阻止元素被浮动的元素覆盖</strong></p>
+<h3 id="问题：CSS工程化的理解"><a href="#问题：CSS工程化的理解" class="headerlink" title="问题：CSS工程化的理解"></a>问题：CSS工程化的理解</h3><ul>
+<li>CSS 工程化是为了解决哪些方面的问题<ul>
+<li>宏观设计：CSS 代码如何组织、如何拆分、模块结构怎样设计？</li>
+<li>编码优化：怎样写出更好的 CSS？</li>
+<li>构建：如何处理我的 CSS，才能让它的打包结果最优？</li>
+<li>可维护性：代码写完了，如何最小化它后续的变更成本？如何确保任何一个同事都能轻松接手？</li>
+</ul>
+</li>
+<li>如果没有以上四方面，可从以下三点聊<ul>
+<li>预处理器：Less、Sass等；</li>
+<li>重要的工程化插件：PostCss</li>
+<li>Webpack Loader等。</li>
+</ul>
+</li>
+<li>预处理器：为什么要用预处理器？它的出现是为了解决什么问题？<ul>
+<li>预处理器，就是CSS世界的”轮子”。</li>
+<li><em>随着前端业务复杂度的提高，前端工程中对 CSS 提出了以下的诉求(传统CSS做不到)</em>*</li>
+<li>1、宏观设计上：我们希望能优化 CSS 文件的目录结构，对现有的 CSS 文件实现复用；</li>
+<li>2、编码优化上：我们希望能写出结构清晰、简明易懂的 CSS，需要它具有一目了然的嵌套层级关系，而不是无差别的一铺到底写法；我们希望它具有变量特征、计算能力、循环能力等等更强的可编程性，这样我们可以少写一些无用的代码；</li>
+<li>3、可维护性上：更强的可编程性意味着更优质的代码结构，实现复用意味着更简单的目录结构和更强的拓展能力，这两点如果能做到，自然会带来更强的可维护性</li>
+<li><em>预处理器普遍具有的特性</em>*</li>
+<li>嵌套代码的能力，通过嵌套来反映不同 css 属性之间的层级关系 ；</li>
+<li>支持定义 css 变量；</li>
+<li>提供计算函数；</li>
+<li>允许对代码片段进行 extend 和 mixin；</li>
+<li>支持循环语句的使用；</li>
+<li>支持将 CSS 文件模块化，实现复用</li>
+<li><em>PostCss：PostCss 是如何工作的？我们在什么场景下会使用 PostCss？</em>*</li>
+<li>预处理器处理的是 类CSS，而 PostCss 处理的就是 CSS 本身</li>
+<li>类似JS世界里的Babel。Babel可以将高版本JS代码转换为低版本的JS代码。PostCss 做的是类似的事情</li>
+<li>PostCss 在业务中的使用场景非常多，这里列举几个最高频的：<ul>
+<li>提高 CSS 代码的可读性：PostCss 其实可以做类似预处理器能做的工作；</li>
+<li>当我们的 CSS 代码需要适配低版本浏览器时，PostCss 的 Autoprefixer 插件可以帮助我们自动增加浏览器前缀；</li>
+<li>允许我们编写面向未来的 CSS：PostCss 能够帮助我们编译 CSS next 代码；</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="问题：Webpack能处理CSS-吗？如何实现？"><a href="#问题：Webpack能处理CSS-吗？如何实现？" class="headerlink" title="问题：Webpack能处理CSS 吗？如何实现？"></a>问题：Webpack能处理CSS 吗？如何实现？</h3><ul>
+<li>Webpack 在裸奔的状态下，是不能处理CSS的，Webpack本身是一个面向JavaScript且只能处理JavaScript代码的模块化打包工具；</li>
+<li>Webpack 在loader的辅助下，是可以处理CSS的。</li>
+</ul>
+<p><strong>如何用 Webpack 实现对 CSS 的处理？</strong></p>
+<ul>
+<li>Webpack中操作CSS需要使用的两个关键的loader：css-loader和style-loader<ul>
+<li>css-loader：导入 CSS 模块，对 CSS 代码进行编译处理；</li>
+<li>style-loader：创建style标签，把 CSS 内容写入标签。</li>
+<li><em>注：css-loader的执行顺序一定要安排在style-loader的前面</em>*</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/03/05/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%882/" data-id="cklvzm9c00000yv92coh1dqeo" data-title="CSS-布局方案2" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-CSS-布局方案1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/" class="article-date">
@@ -413,6 +520,10 @@
       <ul>
         
           <li>
+            <a href="/2021/03/05/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%882/">CSS-布局方案2</a>
+          </li>
+        
+          <li>
             <a href="/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/">CSS-布局方案1</a>
           </li>
         
@@ -426,10 +537,6 @@
         
           <li>
             <a href="/2021/03/02/%E5%A3%B0%E6%98%8E%E6%96%B9%E5%BC%8F-Let/">声明方式-Let</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/02/hello-world/">Hello World</a>
           </li>
         
       </ul>
