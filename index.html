@@ -77,6 +77,188 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-JS-OOP" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/23/JS-OOP/" class="article-date">
+  <time class="dt-published" datetime="2021-04-23T09:29:14.000Z" itemprop="datePublished">2021-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/23/JS-OOP/">JS-OOP</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>基于原型的继承<ul>
+<li>prototype是函数对象上预设的函数属性</li>
+<li>原型是对象上的原型</li>
+<li>对象的原型会指向构造器的prototype属性</li>
+</ul>
+</li>
+<li>原型链<ul>
+<li>并不是所有的函数对象都会有prototype这种属性，<ul>
+<li>例如bind之后的函数</li>
+<li>Object.create(null)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>instanceof<ul>
+<li>[1,2] instanceof Array === true</li>
+<li>instanceof左边是对象，右边是构造器/函数</li>
+<li>左边非对象会返回false</li>
+</ul>
+</li>
+<li>实现继承的方式<ul>
+<li>调用构造函数创建实例（不理想）</li>
+<li>Object.create(Person.prototype),ES5之后支持</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/23/JS-OOP/" data-id="cknwrh4lk0000ra9280p38nd4" data-title="JS-OOP" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-函数和作用域" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
+  <time class="dt-published" datetime="2021-04-23T07:02:08.000Z" itemprop="datePublished">2021-04-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">函数和作用域</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>执行上下文（Execution Context）<ul>
+<li>栈级结构</li>
+<li>JS解释器如何找到我们定义的函数和变量？<ul>
+<li>变量对象(Variable Object)是一个抽象概念中的”对象”，用于存储执行上下文中的变量，函数声明，函数参数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" data-id="cknwrh4lq0002ra927adxe118" data-title="函数和作用域" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-函数" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/04/22/%E5%87%BD%E6%95%B0/" class="article-date">
+  <time class="dt-published" datetime="2021-04-22T09:34:28.000Z" itemprop="datePublished">2021-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/04/22/%E5%87%BD%E6%95%B0/">函数</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>创建函数<ul>
+<li>函数声明<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">function add(a,b)&#123;</span><br><span class="line">    a &#x3D; +a;</span><br><span class="line">    b &#x3D; +b;</span><br><span class="line">    if(isNaN(a) || isNaN(b)) &#123;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    return a+b;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>函数表达式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 函数表达式</span><br><span class="line">var add &#x3D; function(a,b) &#123;</span><br><span class="line">    &#x2F;&#x2F; do sth</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 立即执行函数表达式</span><br><span class="line">(function()&#123;</span><br><span class="line"></span><br><span class="line">&#125;;)();</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; </span><br><span class="line">return function()&#123;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 命名式函数表达式</span><br><span class="line">var add &#x3D; function foo(a,b)&#123;</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></li>
+<li>区别<ul>
+<li>函数声明可前置，就是在函数前调用函数依然可以成功</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>function构造器<h4 id="this"><a href="#this" class="headerlink" title="this"></a>this</h4></li>
+<li>1、全局的this<ul>
+<li>(this === window)true</li>
+<li>this.a = 29; window.a 输出值也是39</li>
+</ul>
+</li>
+<li>2、一般函数的this  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function f1() &#123;</span><br><span class="line">    return this;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">f1() &#x3D;&#x3D;&#x3D; window;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>严格模式下f2() === undefined</li>
+</ul>
+</li>
+<li>3、作为对象方法的函数的this<ul>
+<li>指向当前对象</li>
+</ul>
+</li>
+<li>4、对象原型链上的this</li>
+<li>5、get/set方法中的this</li>
+<li>6、构造器中的this</li>
+<li>7、call/apply方法与this</li>
+<li>8、bind方法与this</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/04/22/%E5%87%BD%E6%95%B0/" data-id="cknwrh4lo0001ra920qbac49g" data-title="函数" class="article-share-link">分享</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-数组" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/04/22/%E6%95%B0%E7%BB%84/" class="article-date">
@@ -615,203 +797,6 @@ showName: function() &#123;
 
 
   
-    <article id="post-CSS-布局方案1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/" class="article-date">
-  <time class="dt-published" datetime="2021-03-04T06:34:07.000Z" itemprop="datePublished">2021-03-04</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/">CSS-布局方案1</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="问题：将某个元素在容器中水平居中"><a href="#问题：将某个元素在容器中水平居中" class="headerlink" title="问题：将某个元素在容器中水平居中"></a>问题：将某个元素在容器中水平居中</h3><h4 id="思路一：绝对定位方案"><a href="#思路一：绝对定位方案" class="headerlink" title="思路一：绝对定位方案"></a>思路一：绝对定位方案</h4><ul>
-<li>2、常规操作：margin 置为负值<ul>
-<li>这条路的前提是，div 盒子的宽高提前已知</li>
-</ul>
-</li>
-<li>2、深入理解元素的流体特性：神奇的 margin: auto<ul>
-<li>当我们想要水平居中某个元素，可设置margin: 0 auto;<ul>
-<li>auto 在任何情况下，只会取下面两种值中的一个<ul>
-<li>1、父元素剩余空间的宽度</li>
-<li>2、0</li>
-</ul>
-</li>
-<li>当元素的布局方式为 static/relative 且宽高已知时，auto 取1中的值；</li>
-<li>当元素的布局方式为 postion/absolute/fixed 或者 float/inline 或者宽高未知时，auto 就取 2中的值</li>
-<li>引深：如何利用 auto 实现元素的垂直居中？<ul>
-<li>利用元素的流体特性：当一个绝对定位元素，其对立定位方向属性同时有具体定位数值的时候，流体特性就发生了<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#center &#123;</span><br><span class="line">  background-color: red;</span><br><span class="line">  width: 200px;</span><br><span class="line">  height: 200px;</span><br><span class="line">  position: absolute;</span><br><span class="line">  top: 0;</span><br><span class="line">  bottom: 0;</span><br><span class="line">  left: 0;</span><br><span class="line">  right: 0;</span><br><span class="line">  margin: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>3、动画属性 <ul>
-<li>在宽高不定的情况下，我们一般是使用 transform 这个属性来达到目的<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#center &#123;</span><br><span class="line">  position: absolute;</span><br><span class="line">  left: 50%;</span><br><span class="line">  top: 50%;</span><br><span class="line">  transform: translate(-50%, -50%);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>注意：position 布局下，我们还可以借助 CSS 的 calc() 函数来完成同样的调整</li>
-</ul>
-</li>
-</ul>
-<h4 id="思路二：Flex-布局"><a href="#思路二：Flex-布局" class="headerlink" title="思路二：Flex 布局"></a>思路二：Flex 布局</h4><p><a target="_blank" rel="noopener" href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html">FLex布局详讲</a></p>
-<ul>
-<li>首先对父元素进行Flex布局，然后指定父元素中子元素的排列方式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#container &#123;</span><br><span class="line">  display: flex;</span><br><span class="line">  justify-content: center;</span><br><span class="line">  align-items: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="思路三：table-布局"><a href="#思路三：table-布局" class="headerlink" title="思路三：table 布局"></a>思路三：table 布局</h4><pre><code>* 待续
-</code></pre>
-<h3 id="移动端疑难杂症：1px-问题如何解决？"><a href="#移动端疑难杂症：1px-问题如何解决？" class="headerlink" title="移动端疑难杂症：1px 问题如何解决？"></a>移动端疑难杂症：1px 问题如何解决？</h3><h4 id="思路一：直接写-0-5px"><a href="#思路一：直接写-0-5px" class="headerlink" title="思路一：直接写 0.5px"></a>思路一：直接写 0.5px</h4><ul>
-<li>这种方法的缺陷在于兼容性不行，IOS 系统需要8及以上的版本，安卓系统则直接不兼容。</li>
-</ul>
-<h4 id="思路二：伪元素先放大后缩小"><a href="#思路二：伪元素先放大后缩小" class="headerlink" title="思路二：伪元素先放大后缩小"></a>思路二：伪元素先放大后缩小</h4><ul>
-<li>先放大、后缩小：在目标元素的后面追加一个 ::after 伪元素，让这个元素布局为 absolute 之后、整个伸展开铺在目标元素上，<br>然后把它的宽和高都设置为目标元素的两倍，border值设为 1px。接着借助 CSS 动画特效中的放缩能力，把整个伪元素缩小为原来的 50%。<br>此时，伪元素的宽高刚好可以和原有的目标元素对齐，而 border 也缩小为了 1px 的二分之一，间接地实现了 0.5px 的效果。</li>
-<li>伪代码如下 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#container[data-device&#x3D;&quot;2&quot;] &#123;</span><br><span class="line">    position: relative;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">#container[data-device&#x3D;&quot;2&quot;]::after&#123;</span><br><span class="line">      position:absolute;</span><br><span class="line">      top: 0;</span><br><span class="line">      left: 0;</span><br><span class="line">      width: 200%;</span><br><span class="line">      height: 200%;</span><br><span class="line">      content:&quot;&quot;;</span><br><span class="line">      transform: scale(0.5);</span><br><span class="line">      transform-origin: left top;</span><br><span class="line">      box-sizing: border-box;</span><br><span class="line">      border: 1px solid #333;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-</ul>
-<h4 id="思路三：viewport缩放来解决"><a href="#思路三：viewport缩放来解决" class="headerlink" title="思路三：viewport缩放来解决"></a>思路三：viewport缩放来解决</h4><ul>
-<li>viewport 中的 meta 标签<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;meta name&#x3D;&quot;viewport&quot; content&#x3D;&quot;initial-scale&#x3D;0.5, maximum-scale&#x3D;0.5, minimum-scale&#x3D;0.5, user-scalable&#x3D;no&quot;&gt;</span><br></pre></td></tr></table></figure></li>
-<li>这里针对像素比为2的页面，把整个页面缩放为了原来的1/2大小。如此一来，本来占用2个物理像素的 1px 样式，现在占用的就是标准的一个物理像素。<br>根据像素比的不同，这个缩放比例可以被计算为不同的值，我们用 js 代码实现如下：**/<br>const scale = 1 / window.devicePixelRatio;<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F; 这里 metaEl 指的是 meta 标签对应的 Dom</span><br><span class="line">metaEl.setAttribute(&#39;content&#39;, &#96;width&#x3D;device-width,user-scalable&#x3D;no,initial-scale&#x3D;$&#123;scale&#125;,maximum-scale&#x3D;$&#123;scale&#125;,minimum-scale&#x3D;$&#123;scale&#125;&#96;);</span><br></pre></td></tr></table></figure></li>
-<li>这样做的副作用也很大，整个页面被缩放了。这时候我们的 1px 已经被处理成物理像素大小了，这样的大小在手机上显示边框很合适。<br>但仔细想想，一些原本不需要被缩小的内容，比如文字、图片等，也被无差别缩小掉了。该如何解决呢</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/04/CSS-%E5%B8%83%E5%B1%80%E6%96%B9%E6%A1%881/" data-id="cklulyz6f0000t4920kysgnd3" data-title="CSS-布局方案1" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-于大宝" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/03/%E4%BA%8E%E5%A4%A7%E5%AE%9D/" class="article-date">
-  <time class="dt-published" datetime="2021-03-03T10:46:16.000Z" itemprop="datePublished">2021-03-03</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/03/03/%E4%BA%8E%E5%A4%A7%E5%AE%9D/">于大宝</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="愿你"><a href="#愿你" class="headerlink" title="愿你"></a>愿你</h3><ul>
-<li>1、开心</li>
-<li>2、健康</li>
-<li>3、努力</li>
-</ul>
-<h3 id="有无有灯有归人"><a href="#有无有灯有归人" class="headerlink" title="有无有灯有归人"></a>有无有灯有归人</h3><ul>
-<li>1、世界盛大灿烂，欢迎回家</li>
-<li>2、落地有声，下笔永恒，水中有火，冰中有热</li>
-</ul>
-<h3 id="三行诗"><a href="#三行诗" class="headerlink" title="三行诗"></a>三行诗</h3><ul>
-<li>我在月光水岸</li>
-<li>披一肩风霜</li>
-<li>等你划一叶小舟，归来</li>
-<li>&#10084;&#10084;</li>
-<li>岁月为笔</li>
-<li>相思为墨</li>
-<li>字里行间全是你</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/03/%E4%BA%8E%E5%A4%A7%E5%AE%9D/" data-id="ckltbrx6s0000hf92d7p49fv1" data-title="于大宝" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Const" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2021/03/02/Const/" class="article-date">
-  <time class="dt-published" datetime="2021-03-02T11:18:30.000Z" itemprop="datePublished">2021-03-02</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/03/02/Const/">Const</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h2 id="Const"><a href="#Const" class="headerlink" title="Const"></a>Const</h2><p>常量：不能改变的叫做常量</p>
-<ul>
-<li>const除了具有let的块级作用域和不会变量提升外，还有就是它定义的是常量，在用const定义变量后，我们就不能修改它了，对变量的修改会抛出异常</li>
-</ul>
-<p>&#10084;&#10084; 注意</p>
-<ul>
-<li>const 声明的变量必须进行初始化，不然会抛出异常 Uncaught SyntaxError: Missing initializer in const declaration。</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const obj &#x3D; &#123;</span><br><span class="line">    name: &#39;xiecheng&#39;,</span><br><span class="line">    age: 34</span><br><span class="line">&#125;</span><br><span class="line">obj.school &#x3D; &#39;imooc&#39;</span><br><span class="line">console.log(obj)</span><br><span class="line">&#x2F;&#x2F; &#123;name: &quot;xiecheng&quot;, age: 34, school: &quot;imooc&quot;&#125;</span><br></pre></td></tr></table></figure>
-
-<p><code>const</code>定义的<code>obj</code>被修改了，我们需要了解JS重病变量是如何存储的</p>
-<ul>
-<li>基本数据类型存储在<code>栈内存</code>中，引用数据类型存储在<code>堆内存</code>中，然后再占内存中保存<code>引用地址</code>。</li>
-</ul>
-<p>&#10084; TIP</p>
-<ul>
-<li>const 实际上保证的并不是变量的值不得改动，而是变量指向的那个内存地址所保存的数据不得改动。</li>
-<li>若对象和数组引用数据类型不改变可以使用<br>```<br>// Object.freeze() 只是浅层冻结，只会对最近一层的对象进行冻结，并不会对深层对象冻结。<br>Object.freeze(obj)</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/02/Const/" data-id="ckltbp5g30000dm92ca6qds98" data-title="Const" class="article-share-link">分享</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
 
 
   <nav id="page-nav">
@@ -848,23 +833,23 @@ showName: function() &#123;
       <ul>
         
           <li>
+            <a href="/2021/04/23/JS-OOP/">JS-OOP</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/">函数和作用域</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/22/%E5%87%BD%E6%95%B0/">函数</a>
+          </li>
+        
+          <li>
             <a href="/2021/04/22/%E6%95%B0%E7%BB%84/">数组</a>
           </li>
         
           <li>
             <a href="/2021/04/19/JS%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">JS数据类型</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/19/this%E6%8C%87%E5%90%91/">this指向</a>
-          </li>
-        
-          <li>
-            <a href="/2021/04/16/JS-%E6%9F%90%E4%BA%9B%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5/">JS-某些名词概念</a>
-          </li>
-        
-          <li>
-            <a href="/2021/03/12/ES6-ES11-1/">ES6-ES11-1</a>
           </li>
         
       </ul>

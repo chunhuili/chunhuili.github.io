@@ -4,17 +4,17 @@
   <meta charset="utf-8">
   
   
-  <title>ES6-ES11-1 | 学习笔记</title>
+  <title>函数和作用域 | 学习笔记</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="简单描述 ~">
+  <meta name="description" content="执行上下文（Execution Context） 栈级结构 JS解释器如何找到我们定义的函数和变量？ 变量对象(Variable Object)是一个抽象概念中的”对象”，用于存储执行上下文中的变量，函数声明，函数参数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ES6-ES11-1">
-<meta property="og:url" content="http://example.com/2021/03/12/ES6-ES11-1/index.html">
+<meta property="og:title" content="函数和作用域">
+<meta property="og:url" content="http://example.com/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="简单描述 ~">
+<meta property="og:description" content="执行上下文（Execution Context） 栈级结构 JS解释器如何找到我们定义的函数和变量？ 变量对象(Variable Object)是一个抽象概念中的”对象”，用于存储执行上下文中的变量，函数声明，函数参数">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-12T02:53:21.000Z">
-<meta property="article:modified_time" content="2021-03-12T02:53:21.936Z">
+<meta property="article:published_time" content="2021-04-23T07:02:08.000Z">
+<meta property="article:modified_time" content="2021-04-23T09:08:37.877Z">
 <meta property="article:author" content="木紫">
 <meta name="twitter:card" content="summary">
   
@@ -77,10 +77,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-ES6-ES11-1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-函数和作用域" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2021/03/12/ES6-ES11-1/" class="article-date">
-  <time class="dt-published" datetime="2021-03-12T02:53:21.000Z" itemprop="datePublished">2021-03-12</time>
+    <a href="/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" class="article-date">
+  <time class="dt-published" datetime="2021-04-23T07:02:08.000Z" itemprop="datePublished">2021-04-23</time>
 </a>
     
   </div>
@@ -91,7 +91,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      ES6-ES11-1
+      函数和作用域
     </h1>
   
 
@@ -99,11 +99,21 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        
+        <ul>
+<li>执行上下文（Execution Context）<ul>
+<li>栈级结构</li>
+<li>JS解释器如何找到我们定义的函数和变量？<ul>
+<li>变量对象(Variable Object)是一个抽象概念中的”对象”，用于存储执行上下文中的变量，函数声明，函数参数</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/03/12/ES6-ES11-1/" data-id="cknoiavgw0000ui922k6e7kfa" data-title="ES6-ES11-1" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/04/23/%E5%87%BD%E6%95%B0%E5%92%8C%E4%BD%9C%E7%94%A8%E5%9F%9F/" data-id="cknwrh4lq0002ra927adxe118" data-title="函数和作用域" class="article-share-link">分享</a>
       
       
       
@@ -113,19 +123,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2021/04/16/JS-%E6%9F%90%E4%BA%9B%E5%90%8D%E8%AF%8D%E6%A6%82%E5%BF%B5/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2021/04/23/JS-OOP/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">前一篇</strong>
       <div class="article-nav-title">
         
-          JS-某些名词概念
+          JS-OOP
         
       </div>
     </a>
   
   
-    <a href="/2021/03/09/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/04/22/%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">后一篇</strong>
-      <div class="article-nav-title">跨域解决方案</div>
+      <div class="article-nav-title">函数</div>
     </a>
   
 </nav>
